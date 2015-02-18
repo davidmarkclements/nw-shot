@@ -1,0 +1,45 @@
+{
+  "name": "nw-shot",
+  "version": "1.0.0",
+  "description": "Take screenshots using nw.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidmarkclements/nw-shot"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "screenshot",
+    "node-webkit",
+    "nw",
+    "nwjs",
+    "nw.js"
+    "webkit",
+    "node"
+  ],
+  "files": [
+    "nw-screenshot",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "win-spawn": "^2.0.0"
+  },
+  "devDependencies": {
+    "assert": "^1.1.1",
+    "image-size": "^0.3.0",
+    "lodash.once": "^2.4.1",
+    "concat-stream": "^1.4.6",
+    "is-png": "^0.1.1",
+    "is-jpg": "^0.1.2"
+  },
+  "bugs": {
+    "url": "https://github.com/davidmarkclements/nw-shot/issues"
+  },
+  "homepage": "https://github.com/davidmarkclements/nw-shot"
+ }
