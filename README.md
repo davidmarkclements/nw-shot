@@ -57,10 +57,24 @@ Specify the height of the browser window
 
 ##### eval
 
-Type: `string`
+Type: `string`|`array<string>`
 Default: `undefined`
 
-Evaluate JavaScript in browser window context
+Evaluate JavaScript in browser window context, if supplied
+as an array of strings, each string will be evaluated and 
+a shot will be taken after each evaluation. The result will
+stream images seperated by new lines. 
+
+Protip: use the [`line-stream`](http://npmjs.org/line-stream) 
+module to group image data into a single buffer that can
+be streamed in one go.
+
+##### encoding
+
+Type: `string`  base64|binary
+Default: 'binary'
+
+
 
 
 ## Troubleshooting

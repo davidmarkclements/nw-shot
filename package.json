@@ -35,7 +35,7 @@
     "assert": "^1.1.1",
     "image-size": "^0.3.0",
     "lodash.once": "^2.4.1",
-    "concat-stream": "^1.4.6",
+    "buffer-compare": "^0.0.1",
     "is-png": "^0.1.1",
     "is-jpg": "^0.1.2"
   },
