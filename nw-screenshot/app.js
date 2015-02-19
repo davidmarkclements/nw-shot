@@ -6,7 +6,7 @@ var options = JSON.parse(gui.App.argv.toString());
 
 // Needed if the procces is running in a framebuffer (like on travis)
 var show = process.env.NWSHOT_SHOW === '1' ? true : false;
-show=true
+
 if (show){
   gui.Window.get().show();
 }
