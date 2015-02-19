@@ -1,6 +1,6 @@
 {
   "name": "nw-shot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Take screenshots using nw.js",
   "repository": {
     "type": "git",
@@ -43,4 +43,4 @@
     "url": "https://github.com/davidmarkclements/nw-shot/issues"
   },
   "homepage": "https://github.com/davidmarkclements/nw-shot"
- }
+}
