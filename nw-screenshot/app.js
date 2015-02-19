@@ -20,7 +20,8 @@ var win = gui.Window.open(options.url, {
   width: options.width,
   height: options.height,
   show: show,
-  frame: false
+  frame: show,
+  toolbar: show
 });
 var prefix = Buffer('data:image');
 var newline = Buffer('\n');
@@ -32,7 +33,7 @@ function capture(e, cb) {
       if (compare(buffer.slice(0, 10), prefix) === 0) {
         process.stdout.write(buffer);
         process.stdout.write(newline);
-        cb();
+        cb();        
       }
      }, {format : options.format, datatype : dataType});
   }, options.delay * 1000);
@@ -43,7 +44,7 @@ function close() {
   gui.Window.get().close(true);
 }
 
-win.on('document-end', function() {
+win.once('document-end', function() {
 
   if (Array.isArray(options.eval)) {
     ;(function recurse(e) {
