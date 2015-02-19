@@ -1,6 +1,6 @@
 nw-shot
 ---
-> Create screenshots using [nw](https://github.com/nwjs/nw.js)
+> Create screenshots using [nw.js](https://github.com/nwjs/nw.js)
 
 ## Install
 
@@ -60,6 +60,7 @@ Specify the height of the browser window
 Type: `string`
 Default: `undefined`
 
+Evaluate JavaScript in browser window context
 
 
 ## Troubleshooting
