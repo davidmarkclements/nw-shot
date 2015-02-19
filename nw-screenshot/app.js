@@ -31,8 +31,8 @@ win.on('document-end', function(){
 	setTimeout(function(){
 		win.capturePage(function(buffer) {
 			process.stdout.write(buffer);
-			// win.close(true);
-			// gui.Window.get().close(true);
+			win.close(true);
+			gui.Window.get().close(true);
 		 }, { format : options.format, datatype : 'buffer'});
 	}, options.delay * 1000);
 });
