@@ -36,7 +36,7 @@ function capture(e, cb) {
         cb();        
       }
      }, {format : options.format, datatype : dataType});
-  }, options.delay * 1000);
+  }, ~~(options.evalDelay) * 1000);
 }
 
 function close() {
@@ -45,19 +45,21 @@ function close() {
 }
 
 win.once('document-end', function() {
+  setTimeout(function(){
 
-  if (Array.isArray(options.eval)) {
-    ;(function recurse(e) {
-      capture(e, function () {
-        if (!options.eval.length) { return close(); }
-        recurse(options.eval.shift());
-      });
-    }(options.eval.shift()));
-    return;
-  }
+    if (Array.isArray(options.eval)) {
+      ;(function recurse(e) {
+        capture(e, function () {
+          if (!options.eval.length) { return close(); }
+          recurse(options.eval.shift());
+        });
+      }(options.eval.shift()));
+      return;
+    }
 
-  capture(options.eval, close);
+    capture(options.eval, close);
 
+  }, ~~(options.delay) * 1000);
 
   
 });
