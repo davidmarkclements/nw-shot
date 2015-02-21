@@ -20,9 +20,9 @@ var win = gui.Window.open(options.url, {
   width: options.width,
   height: options.height,
   show: show,
-  frame: show,
-  toolbar: show
+  frame: show
 });
+
 var prefix = Buffer('data:image');
 var newline = Buffer('\n');
 
@@ -36,7 +36,7 @@ function capture(e, cb) {
         cb();        
       }
      }, {format : options.format, datatype : dataType});
-  }, ~~(options.evalDelay) * 1000);
+  }, options.evalDelay);
 }
 
 function close() {
@@ -59,7 +59,7 @@ win.once('document-end', function() {
 
     capture(options.eval, close);
 
-  }, ~~(options.delay) * 1000);
+  }, options.delay);
 
   
 });

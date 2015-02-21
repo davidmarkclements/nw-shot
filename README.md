@@ -26,12 +26,17 @@ screenshot({
 
 ##### delay
 
-Type: `number` *(seconds)*
+Type: `number` *(milliseconds)*
 Default: `0`
 
-Delay capturing the screenshot.
+Delay between page load and first snapshot, set
 
-Useful when the site does things after load that you want to capture.
+##### evalDelay
+Type: `number` *(milliseconds)*
+Default: `0`
+
+Delay between last eval and next snapshot
+
 
 ##### format
 
@@ -74,8 +79,14 @@ be streamed in one go.
 Type: `string`  base64|binary
 Default: 'binary'
 
+##### app
 
+Type: `string` 
+Default: 'nw-shot/nw-screeshot'
 
+The path to the NW.js app responsible for capturing screen shots,
+this allows for ultimate control, see the `nw-screenshot` folder 
+for an example/boilerplate.
 
 ## Troubleshooting
 
