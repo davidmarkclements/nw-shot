@@ -16,14 +16,16 @@ module.exports = function (options) {
     options.format = 'png';
   }
 
-  var cwd = options.app ? path.join(process.cwd(), options.app)  : app;
+  var cwd = options.app ? options.app : app;
   options.app = null;
 
-  return spawn(nw, [
+  var stream = spawn(nw, [
     '.',
     JSON.stringify(options)
   ],{
     cwd: cwd,
     env: process.env
-  }).stdout;
+  })
+
+  return stream.stdout;
 };
