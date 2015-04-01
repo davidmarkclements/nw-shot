@@ -88,6 +88,15 @@ The path to the NW.js app responsible for capturing screen shots,
 this allows for ultimate control, see the `nw-screenshot` folder 
 for an example/boilerplate.
 
+##### nwPath
+
+Type: `string`|`function`
+Default: [OS dependent - as returned by `nw.findPath`]
+
+The path to the NW.js binary. As a string nwPath simply holds the
+path, as a function it must return a string with the path, the function will receive the nw.findPath value which can be
+mutated and returned accordingly. 
+
 ## Troubleshooting
 
 If you like to use this on travis or with a framebuffer like xvfb than you need to set the environment variable

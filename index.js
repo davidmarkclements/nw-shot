@@ -19,7 +19,10 @@ module.exports = function (options) {
   var cwd = options.app ? options.app : app;
   options.app = null;
 
-  var stream = spawn(nw, [
+  var nwPath = options.nwPath instanceof Function ? options.nwPath(nw) : nw;
+  nwPath = typeof options.nwPath === 'string' ? options.nwPath : nw;
+
+  var stream = spawn(nwPath, [
     '.',
     JSON.stringify(options)
   ],{
