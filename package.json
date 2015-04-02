@@ -8,8 +8,10 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "",
+    "postinstall": "install-nw"
   },
+  "nw": "0.12.0-alpha3",
   "keywords": [
     "screenshot",
     "node-webkit",
@@ -28,16 +30,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "win-spawn": "^2.0.0",
-    "nw": "0.12.0-alpha3",
-    "buffer-compare": "^0.0.1"
-  },
-  "devDependencies": {
-    "assert": "^1.1.1",
-    "image-size": "^0.3.0",
-    "lodash.once": "^2.4.1",
-    "is-png": "^0.1.1",
-    "is-jpg": "^0.1.2"
+    "buffer-compare": "^0.0.1",
+    "fast-download": "^0.3.4",
+    "install-nw": "^1.0.3",
+    "progress-stream": "^1.1.0",
+    "win-spawn": "^2.0.0"
   },
   "bugs": {
     "url": "https://github.com/davidmarkclements/nw-shot/issues"
