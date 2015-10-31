@@ -5,7 +5,7 @@ nw-shot
 ## Install
 
 ```shell
-npm install nw
+npm install nw-shot
 ```
 
 
